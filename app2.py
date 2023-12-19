@@ -2,6 +2,10 @@ import streamlit as st
 from PIL import Image
 from ultralyticsplus import YOLO, postprocess_classify_output
 
+subprocess.run("python -m venv venv", capture_output=True, text=True)
+subprocess.run("venv/Scripts/activate", capture_output=True, text=True)
+subprocess.run("pip install -r requirements.txt", capture_output=True, text=True)
+
 # Load model
 model = YOLO('best.pt')
 
